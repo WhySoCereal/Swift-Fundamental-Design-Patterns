@@ -46,7 +46,7 @@ public final class AddressViewController: UIViewController {
   }
   public var addressView: AddressView! {
     guard isViewLoaded else { return nil } // checks isViewLoaded to prevent creating the view before the view controller is presented on screen
-    return (view as! AddressView)
+    return (view as! AddressView) // if true cast to an AddressView
   }
   
   // MARK: - View Lifecycle
@@ -55,6 +55,7 @@ public final class AddressViewController: UIViewController {
     updateViewFromAddress()
   }
   
+    // Controller should update its
   private func updateViewFromAddress() {
     guard let addressView = addressView,
       let address = address else { return }
