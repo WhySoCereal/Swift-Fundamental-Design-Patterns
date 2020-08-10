@@ -22,6 +22,7 @@ public class MenuViewController: UIViewController {
 
   public weak var delegate: MenuViewControllerDelegate?
 
+
   @IBOutlet public var tableView: UITableView! {
     didSet {
       tableView.dataSource = self
