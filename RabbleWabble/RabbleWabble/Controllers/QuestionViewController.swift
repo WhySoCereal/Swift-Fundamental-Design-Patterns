@@ -10,7 +10,11 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 // MARK: - Instance Properties
-    public var questionGroup = QuestionGroup.basicPhrases()
+    public var questionGroup: QuestionGroup! {
+        didSet {
+            navigationItem.title = questionGroup.title
+        }
+    }
     public var questionIndex = 0
     
     public var correctCount = 0
@@ -67,4 +71,6 @@ class QuestionViewController: UIViewController {
         showQuestion()
     }
 }
+
+
 
